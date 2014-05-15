@@ -1,7 +1,7 @@
 php-google-analytics-cookie-parser
 ==================================
 
-Parses the _ga analytics.js cookie to a ParsedCookie result wich includes version, depth, client id and timestamp.
+Parses the _ga analytics.js cookie to a ParsedCookie result which includes version, depth, client id and timestamp.
 
 Acknowledgements
 ----------------
