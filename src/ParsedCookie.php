@@ -22,6 +22,12 @@ class ParsedCookie
     /** @var string */
     private $timestamp;
 
+    /**
+     * @param string $version
+     * @param string $depth
+     * @param string $clientId
+     * @param string $timestamp
+     */
     public function __construct($version, $depth, $clientId, $timestamp)
     {
         $this->version = $version;
