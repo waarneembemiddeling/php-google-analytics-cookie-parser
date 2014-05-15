@@ -1,0 +1,16 @@
+{
+    "name": "waarneembemiddeling/php-google-analytics-cookie-parser",
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kristian Zondervan",
+            "email": "k.zondervan@waarneembemiddeling.nl"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Wb\\GoogleAnalyticsCookieParser\\": "src/" }
+    }
+}
