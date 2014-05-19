@@ -7,6 +7,22 @@ php-google-analytics-cookie-parser
 
 Parses the _ga analytics.js cookie to a ParsedCookie result which includes version, depth, client id and timestamp.
 
+Usage
+-------------
+```
+use Wb\GoogleAnalyticsCookieParser\GoogleAnalyticsCookieParser;
+
+$string = 'GA1.2.230657868.1384941727';
+
+$parser = new GoogleAnalyticsCookieParser();
+$result = $parser->parse($string);
+
+// Available properties
+$result->getVersion();
+$result->getDepth();
+$result->getClientId();
+$result->getTimestamp()
+        
 Acknowledgements
 ----------------
 * Thanks to Matt Clarke for his research on the analytics.js/_ga cookie format: https://plus.google.com/110147996971766876369/posts/Mz1ksPoBGHx
