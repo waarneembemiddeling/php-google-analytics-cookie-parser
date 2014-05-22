@@ -11,4 +11,4 @@ namespace Wb\GoogleAnalyticsCookieParser\Exception;
 
 class InvalidArgumentException extends \InvalidArgumentException {
 
-} 
+}
