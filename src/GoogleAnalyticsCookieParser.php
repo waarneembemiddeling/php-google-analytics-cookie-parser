@@ -8,6 +8,8 @@
 
 namespace Wb\GoogleAnalyticsCookieParser;
 
+use Wb\GoogleAnalyticsCookieParser\Exception\InvalidArgumentException;
+
 class GoogleAnalyticsCookieParser
 {
     /**
@@ -17,11 +19,15 @@ class GoogleAnalyticsCookieParser
     {
         $result = explode('.', $cookieString);
 
-        if (count($result) == 3) {
+        $count = count($result);
+        if ($count == 3) {
             list($version, $depth, $clientId) = $result;
             $timestamp = null;
-        } else {
+        } else if ($count == 4) {
             list($version, $depth, $clientId, $timestamp) = $result;
+        } else {
+            throw new InvalidArgumentException(sprintf("Problem with parsing cookie string: %s Example of a correct
+                string: GA1.2.20c7aee4-176d-4926-b6bb-db24b44d9ecb", $cookieString));
         }
 
         return new ParsedCookie($version, $depth, $clientId, $timestamp);
