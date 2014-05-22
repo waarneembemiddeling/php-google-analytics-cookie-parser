@@ -38,13 +38,11 @@ class GoogleAnalyticsCookieParserTest extends \PHPUnit_Framework_TestCase
         $this->assertSame(null, $result->getTimestamp());
     }
 
-    public function testParseException()
+    public function testInvalidArgument()
     {
         $this->setExpectedException('InvalidArgumentException');
-
-        $string = 'incorrectstring';
-
+        
         $parser = new GoogleAnalyticsCookieParser();
-        $parser->parse($string);
+        $parser->parse('incorrectstring');
     }
 }
