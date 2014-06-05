@@ -21,8 +21,7 @@ class GoogleAnalyticsCookieParserTest extends \PHPUnit_Framework_TestCase
 
         $this->assertSame('GA1', $result->getVersion());
         $this->assertSame('2', $result->getDepth());
-        $this->assertSame('230657868', $result->getClientId());
-        $this->assertSame('1384941727', $result->getTimestamp());
+        $this->assertSame('230657868.1384941727', $result->getClientId());
     }
 
     public function testParseWithoutTimestamp()
@@ -35,7 +34,6 @@ class GoogleAnalyticsCookieParserTest extends \PHPUnit_Framework_TestCase
         $this->assertSame('GA1', $result->getVersion());
         $this->assertSame('2', $result->getDepth());
         $this->assertSame('20c7aee4-176d-4926-b6bb-db24b44d9ecb', $result->getClientId());
-        $this->assertSame(null, $result->getTimestamp());
     }
 
     public function testInvalidArgument()

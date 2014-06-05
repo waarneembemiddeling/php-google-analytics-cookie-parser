@@ -19,21 +19,16 @@ class ParsedCookie
     /** @var string */
     private $clientId;
 
-    /** @var string */
-    private $timestamp;
-
     /**
      * @param string $version
      * @param string $depth
      * @param string $clientId
-     * @param string $timestamp
      */
-    public function __construct($version, $depth, $clientId, $timestamp)
+    public function __construct($version, $depth, $clientId)
     {
         $this->version = $version;
         $this->depth = $depth;
         $this->clientId = $clientId;
-        $this->timestamp = $timestamp;
     }
 
     /**
@@ -66,22 +61,6 @@ class ParsedCookie
     public function getDepth()
     {
         return $this->depth;
-    }
-
-    /**
-     * @param string $timestamp
-     */
-    public function setTimestamp($timestamp)
-    {
-        $this->timestamp = $timestamp;
-    }
-
-    /**
-     * @return string
-     */
-    public function getTimestamp()
-    {
-        return $this->timestamp;
     }
 
     /**
