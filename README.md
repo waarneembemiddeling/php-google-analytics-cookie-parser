@@ -21,8 +21,6 @@ $result = $parser->parse($string);
 $result->getVersion();
 $result->getDepth();
 $result->getClientId();
-$result->getTimestamp()
-
 ```
 
 Acknowledgements
