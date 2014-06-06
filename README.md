@@ -18,9 +18,9 @@ $parser = new GoogleAnalyticsCookieParser();
 $result = $parser->parse($string);
 
 // Available properties
-$result->getVersion();
-$result->getDepth();
-$result->getClientId();
+$result->getVersion(); // Output: GA1
+$result->getDepth(); // Output: 2
+$result->getClientId(); // Output: 230657868.1384941727
 ```
 
 Acknowledgements
