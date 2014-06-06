@@ -22,7 +22,6 @@ class GoogleAnalyticsCookieParser
         $count = count($result);
         if ($count == 3) {
             list($version, $depth, $clientId) = $result;
-            $timestamp = null;
         } else {
             throw new InvalidArgumentException(sprintf("Problem with parsing cookie string: %s Example of a correct
                 string: GA1.2.20c7aee4-176d-4926-b6bb-db24b44d9ecb", $cookieString));
